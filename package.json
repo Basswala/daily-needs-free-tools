@@ -1,0 +1,51 @@
+{
+  "name": "daily-needs-free-tools",
+  "version": "1.0.0",
+  "description": "Free client-side operator calculators and growth tools for ecommerce, agencies, and creators.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "dna-tools": "./dist/cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "node --test tests/*.test.mjs",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basswala/daily-needs-free-tools.git"
+  },
+  "homepage": "https://dailyneedsassociation.com/tools/",
+  "keywords": [
+    "ecommerce",
+    "roas-calculator",
+    "unit-economics",
+    "cac",
+    "ltv",
+    "runway-calculator",
+    "inventory-reorder-point",
+    "marketing-tools",
+    "operator-tools",
+    "growth"
+  ],
+  "author": "Daily Needs Association <gulati@dailyneedsassociation.com> (https://dailyneedsassociation.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
